@@ -60,8 +60,8 @@ public class CreatePlayer extends HttpServlet {
             out.println("<input type=\"text\" name=\"firstName\" placeholder=\"FirstName\" ><br>");
             out.println("Last Name:<br>");
             out.println("<input type=\"text\" name=\"lastName\" placeholder=\"LastName\"><br>");  
-            out.println("Join Date:<br>");
-            out.println("<input type=\"date\" name=\"joined\" placeholder=\"01-12-2000\" ><br>");
+            out.println("Username:<br>");
+            out.println("<input type=\"text\" name=\"username\" ><br>");
             out.println("Email<br>");
             out.println("<input type=\"text\" name=\"email\" placeholder=\"abc@abc.com\" ><br><br>");    
             out.println("<input type=\"submit\" value=\"Create Player\">");
