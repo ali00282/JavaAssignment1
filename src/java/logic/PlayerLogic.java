@@ -11,6 +11,7 @@ import entity.Username;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Clock;
+import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -73,16 +74,18 @@ public class PlayerLogic extends GenericLogic<Player, PlayerDAO> {
     public Player createEntity(Map<String,String[]> parameterMap){
         
          Player player = new Player();
+         
+         Date date = Date.from(Instant.now(Clock.systemDefaultZone()));
          player.setId(Integer.valueOf(parameterMap.get(ID)[0]));
          player.setFirstName(parameterMap.get(FIRST_NAME)[0]);
          player.setLastName(parameterMap.get(LAST_NAME)[0]);
-        try {
-            player.setJoined(new SimpleDateFormat("yyyy-MM-dd").parse(parameterMap.get(JOINED)[0]));
-        } catch (ParseException ex) {
-            Logger.getLogger(PlayerLogic.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        player.setJoined(date);
          player.setEmail(parameterMap.get(EMAIL)[0]);
+         
         add(player);
+        UsernameLogic logic = new UsernameLogic();
+        Username username = logic.createEntity(parameterMap);
+        logic.add(username);
         return player;
     }
 }
