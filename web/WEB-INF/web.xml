@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>UsernameTableViewNormal</servlet-name>
+        <servlet-class>view.UsernameTableViewNormal</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsernameTableViewFancy</servlet-name>
+        <servlet-class>view.UsernameTableViewFancy</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SampleForm</servlet-name>
+        <servlet-class>view.SampleForm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsernameTableViewFancyJSP</servlet-name>
+        <jsp-file>/jsp/UsernameTableViewFancy.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsernameTableViewNormal</servlet-name>
+        <url-pattern>/UsernameTableViewNormal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsernameTableViewFancy</servlet-name>
+        <url-pattern>/UsernameTableViewFancy</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SampleForm</servlet-name>
+        <url-pattern>/SampleForm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsernameTableViewFancyJSP</servlet-name>
+        <url-pattern>/UsernameTableViewFancyJSP</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <resource-ref>
+        <description>DB Connection</description>
+        <res-ref-name>ScoreDB</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <persistence-context-ref>
+        <persistence-context-ref-name>persistence/em</persistence-context-ref-name>
+        <persistence-unit-name>JPA-Tomcat-ScoreDB</persistence-unit-name>
+    </persistence-context-ref>
+</web-app>
