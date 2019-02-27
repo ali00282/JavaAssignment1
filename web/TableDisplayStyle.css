@@ -1,0 +1,19 @@
+
+/*Author: Tariq Ali*/
+/*This CSS Class all styles that is used for displaying all tables, For EG: Player Table, Score Table, Username Table*/
+body {
+    margin: 0;
+    padding: 0;
+    background: url("blue.jpg") center no-repeat ;
+/*    background-size: cover;*/
+    font-family: sans-serif;
+    /*opacity: 0.9;*/
+    
+}
+
+
+.heading{
+    
+    color: darkolivegreen;
+}
+

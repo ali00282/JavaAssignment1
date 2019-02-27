@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package logic;
 
 import dao.ScoreDAO;
@@ -18,6 +14,8 @@ import static logic.PlayerLogic.ID;
 /**
  *
  * @author Tariq Ali
+ * Score Logic class desribes that how Score Data will be stored in database. 
+   For eg: Score attributes
  */
 public class ScoreLogic extends GenericLogic<Score, ScoreDAO> {
 
@@ -55,6 +53,11 @@ public class ScoreLogic extends GenericLogic<Score, ScoreDAO> {
         return get(() -> dao().findByPlayerId(playerid));
     }
 
+    
+   /*This is an Override method of SuperClass (GenericLogic).
+    THis method describes the methology that how user entered data(parameterMap)
+    will become the value of Score class properties
+    By using score.set()method.*/  
     @Override
     public Score createEntity(Map<String, String[]> parameterMap) {
 
@@ -62,13 +65,13 @@ public class ScoreLogic extends GenericLogic<Score, ScoreDAO> {
         Date date = Date.from(Instant.now(Clock.systemDefaultZone()));
         Player player = new PlayerLogic().getPlayersWithId(Integer.valueOf(parameterMap.get(ID)[0]));
 
-        if (player != null) {
+//        if (player != null) {
             
             score.setPlayerid(player);
             score.setScore(Integer.valueOf(parameterMap.get(SCORE)[0]));
             score.setSubmission(date);
             add(score);
-        }
+//        }
         
 
         return score;

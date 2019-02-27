@@ -1,0 +1,78 @@
+
+/*Author: Tariq Ali*/
+/*This CSS class has all Create Player Form Styles*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("Score.jpg") center no-repeat ;
+    background-size: cover;
+    font-family: sans-serif;
+    /*opacity: 0.9;*/
+    
+}
+
+.loginbox {
+    
+    width: 320px;
+    height: 500px;
+    background: #333333;
+    color: #fff;
+    top: 50%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+
+.avater {
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% -50px);
+    padding: 70px 30px;
+    
+    
+}
+
+.loginbox p {
+    
+    margin:0;
+    padding:0;
+    /*font-weight: bold;*/
+}
+
+p {
+    color: yellowgreen;
+}
+
+.loginbox input {
+    color: white;
+    width: 100%;
+    margin-bottom: 5px;
+    
+}
+
+.loginbox input[type="text"], [type="text"]
+{    
+    color: wheat;
+    border: none;
+    border-bottom: 3px solid #fff;
+    background: transparent;
+    outline: none;
+/*    height: 10px;*/
+}
+
+.heading{
+    
+    color: white;
+}
+
+.Entry {
+    
+    color: yellow;
+}
+

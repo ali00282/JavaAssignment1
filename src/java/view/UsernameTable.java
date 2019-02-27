@@ -32,6 +32,8 @@ public class UsernameTable extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    //    This method shows the Username Table in a Table form
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -43,7 +45,10 @@ public class UsernameTable extends HttpServlet {
             out.println("<title>Servlet UsernameTable</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1 align=\"center\">Servlet UsernameTable</h1>");
+            out.println("<div class=\"heading\" >");
+            out.println("<h1 align=\"center\"> Username Table</h1>");
+            out.println("</div>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"TableDisplayStyle.css\">");
             
 //          ----------------------------------------------------------------------------------------------  
             

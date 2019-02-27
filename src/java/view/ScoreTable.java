@@ -32,25 +32,29 @@ public class ScoreTable extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    //    This method shows the Score Table in a Table form
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet ScoreTable</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1 align=\"center\">Servlet ScoreTable</h1>");
+            out.println("<div class=\"heading\" >");
+            out.println("<h1 align=\"center\"> Score Table</h1>");
+            out.println("</div>");
+            out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"TableDisplayStyle.css\">");
+            
             
             //          ----------------------------------------------------------------------------------------------  
             
              ScoreLogic logic = new ScoreLogic();
             List<Score> courses = logic.getAll();
             out.println("<table align=\"center\" border=\"1\">");
-//            out.println("<caption>Username Table</>");
             out.println("<tr>");
             out.println("<th>playerId</th>");
             out.println("<th>score</th>");

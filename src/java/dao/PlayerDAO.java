@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dao;
 
 import entity.Player;
@@ -14,10 +9,16 @@ import java.util.Map;
 /**
  *
  * @author Tariq Ali
+ * 
+    This class basically create Player Data Access Object. 
+    Basically methods in this class helps Player logic to find user entered data
  */
+
+
 public class PlayerDAO extends GenericDAO<Player>{
     
     
+// PlayerDAO Constructor that uses all SuperClass method and properties
     public PlayerDAO(){
             
         super(Player.class);

@@ -1,3 +1,6 @@
+/*
+This css was originally given by professor*/
+
 body , html{
     /*background-image:url(CreateScoreImage.jpg);*/
     background-color: greenyellow;
@@ -107,3 +110,7 @@ li.dropdown {
 
 
 
+
+.screen {
+
+}

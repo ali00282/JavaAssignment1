@@ -6,128 +6,90 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style_1.css">
     </head>
-    <body class="row-container">
-        <div class="row">
+    <!--<body class="row-container">-->
+    <body >
+        <div class="head">
             <header>
-                <h3>WELCOME TO MY FIRST JAVA WEB APPLICATION</h3>
+                <h3 align="center" ><em>WELCOME TO MY FIRST JAVA WEB APPLICATION </em></h3>
             </header>
         </div>
-        <!--        <div class="row">
-                    <nav>
-                        <ul>
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">Tables</a>
-                                <div class="dropdown-content">
-                                    <a href="UsernameTableViewNormal" target="iframe_a">Username Normal</a>
-                                    <a href="UsernameTableViewFancy" target="iframe_a">Username Fancy</a>
-                                    <a href="UsernameTableViewFancyJSP" target="iframe_a">Username Fancy JSP</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">Input</a>
-                                <div class="dropdown-content">
-                                    <a href="CreatePlayer" target="iframe_a">Create Player</a>
-                                    <a href="CreateScore" target="iframe_a">Score Input</a>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <a href="javascript:void(0)" class="dropbtn">All Tables</a>
-                                <div class="dropdown-content">
-                                    <a href="PlayerTable" target="iframe_a">Player Table</a>
-                                    <div class="test">
-                                    <a href="UsernameTable" target="iframe_a">Username Table</a>
-                                    </div>
-                                    <a href="ScoreTable" target="iframe_a">Score Table</a>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="SampleForm" target="iframe_a">Sample Form</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="fill-row" >
-                    <article >
-                        <iframe name="iframe_a" ></iframe>
-                    </article>
-                </div>-->
-
-
+      
+    <!--From bottom, the code display the main web page(Welcome Page), 
+        Basically, it has the menubar that allows user to perform
+        what action user wants to do-->
         <!----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
-
-        <div class="row">
-            <div>
-                <nav>
-
+        <div class="menubar">
+            <ul>
+                
+                <!--Sample Tables Dropdown menu that is given professor-->
+                <li> Sample Tables 
+                
                     <ul>
-                        <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn"><b>All Tables</b></a>
-                            <div class="dropdown-content">
-                                <a href="PlayerTable" target="iframe_a"><em>Player Table</em></a>
-                                <a href="UsernameTable" target="iframe_a"><em>Username Table</em></a>
-                                <a href="ScoreTable" target="iframe_a"><em>Score Table</em></a>
-                            </div>
+                        <li> 
+                            <a href="UsernameTableViewNormal" target="iframe_a">Username Normal</a>
+                        </li>
+                        <li>
+                            <a href="UsernameTableViewFancy" target="iframe_a">Username Fancy</a>
+                        </li>
+                        <li> 
+                            <a href="UsernameTableViewFancyJSP" target="iframe_a">Username Fancy JSP</a>
                         </li>
                     </ul>
-
-                    <ul>
-                        <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn"><b>Tables</b></a>
-                            <div class="dropdown-content">
-                                <a href="UsernameTableViewNormal" target="iframe_a"><em>Username Normal</em></a>
-                                <a href="UsernameTableViewFancy" target="iframe_a"><em>Username Fancy</em></a>
-                                <a href="UsernameTableViewFancyJSP" target="iframe_a"><em>Username Fancy JSP</em></a>
-                            </div>
-                        </li>
-
-                    </ul>
-                    <ul>
-                        <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropbtn"><b>Input</b></a>
-                            <div class="dropdown-content">
-                                <a href="CreatePlayer" target="iframe_a"><em>Create Player</em></a>
-                                <a href="CreateScore" target="iframe_a"><em>Score Input</em></a>
-                            </div>
-                        </li>
-                    </ul>
-
-
+                    
+                </li>
+  
+                <!--Sample form to fill user details that is given by professor-->
+                <li> 
+                    <a href="SampleForm" target="iframe_a"> Sample Form </a>
+                </li>
+                
+             
+                <li> Input 
+                    
                     <ul>
                         <li>
-                            <a href="SampleForm" target="iframe_a"><b>Sample Form</b></a>
+                            <a href="CreatePlayer" target="iframe_a">Create Player</a>  
+                        </li>  
+                        <li>
+                            <a href="CreateScore" target="iframe_a">Create Score</a>
                         </li>
                     </ul>
-                </nav>
-            </div>
-
-            <div>
-                <article >
-                    <iframe name="iframe_a" ></iframe>
-                </article>
-
-            </div>
-
-
-
-
-
+                </li>
+                
+                <!--This menu list shows the dropdown menu of actual database tables-->
+                <li> Actual Tables             
+                    <ul>
+                        <li> 
+                     <a href="PlayerTable" target="iframe_a">Player Table</a> 
+                        </li>
+                        <li>  
+                     <a href="ScoreTable" target="iframe_a">Score Table</a> 
+                        </li>
+                        <li> 
+                     <a href="UsernameTable" target="iframe_a">Username Table</a> 
+                        </li>    
+                    </ul>
+                </li>
+     
+            </ul>
+      
         </div>
+      
+        <br />
+        <!--This is a frame inside the main web page. it shows all the anchors in a same frame without going to different page-->
+             <center>
+                 <iframe name="iframe_a" width="700" height="500" scrolling="yes">     
+             </iframe>
+             </center>
+     
+        
+        
+        <!------------------------------------------------------------------------------------------------------------------------------------->
+        
 
-
-
-
-
-        <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
-
-
-        <div class="row">
-            <footer>
-                <h3 align="center">HTML Sample JPA and Tomcat</h3>
-            </footer>
-        </div>
     </body>
 </html>
+
+<!--end index.html-->

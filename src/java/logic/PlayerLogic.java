@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package logic;
 
 import dao.PlayerDAO;
@@ -23,6 +19,9 @@ import static logic.UsernameLogic.USERNAME;
 /**
  *
  * @author Tariq Ali
+ * 
+   Player Logic class desribes that how Player Data will be stored in database. 
+   For eg: Player attribues
  */
 public class PlayerLogic extends GenericLogic<Player, PlayerDAO> {
     
@@ -70,6 +69,10 @@ public class PlayerLogic extends GenericLogic<Player, PlayerDAO> {
         
     }
     
+    /*This is an Override method of SuperClass (GenericLogic).
+    THis method describes the methology that how user entered data
+    will become the value of Player class properties
+    By using player.set()method.*/       
     @Override
     public Player createEntity(Map<String,String[]> parameterMap){
         
@@ -79,7 +82,7 @@ public class PlayerLogic extends GenericLogic<Player, PlayerDAO> {
          player.setId(Integer.valueOf(parameterMap.get(ID)[0]));
          player.setFirstName(parameterMap.get(FIRST_NAME)[0]);
          player.setLastName(parameterMap.get(LAST_NAME)[0]);
-        player.setJoined(date);
+         player.setJoined(date);
          player.setEmail(parameterMap.get(EMAIL)[0]);
          
         add(player);

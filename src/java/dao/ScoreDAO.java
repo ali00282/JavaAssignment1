@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dao;
 
 import entity.Score;
@@ -15,10 +11,14 @@ import java.util.Map;
 /**
  *
  * @author Tariq Ali
+ * 
+    This class basically create Score Data Access Object. 
+    Basically methods in this class helps Score logic to find user entered data
  */
 public class ScoreDAO extends GenericDAO <Score> {
     
     
+    // ScoreDAO Constructor that uses all SuperClass method and properties
     public ScoreDAO(){
         
         super(Score.class);
